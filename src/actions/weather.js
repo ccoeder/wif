@@ -1,4 +1,4 @@
-import api from "../library/api";
+import api from "../lib/api";
 
 export const FETCHING_WEATHER = "FETCH_WEATHER";
 export const FETCHING_WEATHER_SUCCESS = "FETCHING_WEATHER_SUCCESS";
@@ -10,9 +10,10 @@ function fetchingWeather() {
   };
 }
 
-function fetchingWeatherSuccess() {
+function fetchingWeatherSuccess(data) {
   return {
-    type: FETCHING_WEATHER_SUCCESS
+    type: FETCHING_WEATHER_SUCCESS,
+    data
   };
 }
 
