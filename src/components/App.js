@@ -5,7 +5,7 @@ import Weather from "./Weather";
 class App extends Component {
   render() {
     return (
-      <div>
+      <div class="container">
         <Location />
         <Weather />
       </div>

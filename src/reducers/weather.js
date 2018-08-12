@@ -15,14 +15,13 @@ export default function(state = initialState, action) {
     case FETCHING_WEATHER:
       return {
         ...state,
-        payload: [],
         isLoading: true
       };
     case FETCHING_WEATHER_SUCCESS:
       return {
         ...state,
         isLoading: false,
-        payload: action.data
+        payload: [action.data, ...state.payload]
       };
     case FETCHING_WEATHER_FAILURE:
       return {
