@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Table } from "reactstrap";
-import Chart from "./Chart";
+import Chart from "../components/Chart";
 
 class Weather extends Component {
   renderWeather(cityData) {
@@ -9,7 +9,6 @@ class Weather extends Component {
     const temps = cityData.list.map(weather => weather.main.temp);
     const pressures = cityData.list.map(weather => weather.main.pressure);
     const humidities = cityData.list.map(weather => weather.main.humidity);
-    const { lon, lat } = cityData.city.coord;
 
     return (
       <tr key={name}>

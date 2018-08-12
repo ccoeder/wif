@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Location from "./Location";
-import Weather from "./Weather";
+import Location from "../containers/Location";
+import Weather from "../containers/Weather";
 
 class App extends Component {
   render() {
